@@ -8,15 +8,15 @@ import { AppService } from './app.service';
   imports: [
     ClientsModule.register([
       {
-        name: 'BILLING_SERVICE',
+        name: 'AUTH_SERVICE',
         transport: Transport.KAFKA,
         options: {
           client: {
-            clientId: 'billing',
+            clientId: 'auth',
             brokers: ['localhost:9092'],
           },
           consumer: {
-            groupId: 'billing-consumer',
+            groupId: 'auth-consumer',
           },
         },
       },
